@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;  
+    
 }
 
 .body {
@@ -10,8 +11,11 @@
     'header header header header'
 		'sidebar main main main'
 		'footer footer footer footer';
-        background-color: rgb(155, 150, 150);
-        
+        background-color: rgb(192, 183, 183);
+        grid-template-rows: 300px 1frpx 100px;
+        grid-template-columns: 150px 1fr;
+     min-height: 100vh;
+
 
 }
 
@@ -32,16 +36,21 @@ grid-area: header;
 
 .sidebar {
 grid-area: sidebar;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+padding: 20px 10px;
 }
 
 .container {
 display: flex;
-justify-content:left;
 flex-direction: column;
+gap: 20px;
 }
 
 .category {
-    padding-bottom: 20px;
+   
 }
 
 .category_items {
@@ -50,6 +59,64 @@ flex-direction: column;
 
 .main {
     grid-area: main;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: aliceblue;
+}
+
+.card-img {
+width: 100%;
+}
+
+.card-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+      color: #555;
+
+}
+
+h3 span {
+  color: #555;
+  font-family: 'Georgia', serif;
+}
+
+.card-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.btn {
+   width: 300px;
+  padding: 20px;
+  background-color: rgb(197, 26, 197);
+  color: aliceblue; 
+   border: none;
+  outline: none;
+   cursor: pointer; 
+     font-family: 'Georgia', serif;
+font-size: medium;
 }
 
 .footer {
